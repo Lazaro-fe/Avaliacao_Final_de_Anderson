@@ -13,16 +13,18 @@ public class Movimentacao {
     public Movimentacao(String tipo_de_movimentacao, String data_da_movimentacao, int quantidade, String nome_do_produto, String login, int id_produto, int id_usuario){
         this.tipo_de_movimentacao = tipo_de_movimentacao;
         this.data_da_movimentacao = data_da_movimentacao;
+        this.quantidade = quantidade;
         this.nome_do_produto = nome_do_produto;
         this.login = login;
         this.id_produto = id_produto;
         this.id_usuario = id_usuario;
     }
 
-    public Movimentacao(int id_da_movimentacao, String tipo_de_movimentacao, String data_da_movimentacao, String nome_do_produto, String login, int id_produto, int id_usuario){
+    public Movimentacao(int id_da_movimentacao, String tipo_de_movimentacao, String data_da_movimentacao, int quantidade, String nome_do_produto, String login, int id_produto, int id_usuario){
         this.id_da_movimentacao = id_da_movimentacao;
         this.tipo_de_movimentacao = tipo_de_movimentacao;
         this.data_da_movimentacao = data_da_movimentacao;
+        this.quantidade = quantidade;
         this.nome_do_produto = nome_do_produto;
         this.login = login;
         this.id_produto = id_produto;
@@ -53,6 +55,14 @@ public class Movimentacao {
         this.data_da_movimentacao = data_da_movimentacao;
     }
 
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
     public String getNome_do_produto() {
         return nome_do_produto;
     }
@@ -61,11 +71,11 @@ public class Movimentacao {
         this.nome_do_produto = nome_do_produto;
     }
 
-    public String getlogin() {
+    public String getLogin() {
         return login;
     }
 
-    public void setlogin(String login) {
+    public void setLogin(String login) {
         this.login = login;
     }
 

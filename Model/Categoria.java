@@ -1,4 +1,5 @@
 package Model;
+
 public class Categoria {
 
     private int id_categoria;
