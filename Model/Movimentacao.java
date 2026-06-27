@@ -1,14 +1,33 @@
 package Model;
+
+
+@Entity
+@Table(name = "movimentacoes")
 public class Movimentacao {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_da_movimentacao;
+
+    @Column(nullable = false)
     private String tipo_de_movimentacao;
+
+    @Column(nullable = false)
     private String data_da_movimentacao;
+
+    @Column(nullable = false)
     private int quantidade;
-    private String nome_do_produto;
-    private String login;
-    private int id_produto;
+
+    @ManyToOne
+    @JoinColumn(name = "id_produto", nullable = false)
+    private Produto produto;
+
+    @ManyToOne
+    @JoinColumn(name = "id_usuario", nullable = false)
     private int id_usuario;
+
+    public Movimentacao(){
+    }
 
     public Movimentacao(String tipo_de_movimentacao, String data_da_movimentacao, int quantidade, String nome_do_produto, String login, int id_produto, int id_usuario){
         this.tipo_de_movimentacao = tipo_de_movimentacao;

@@ -1,9 +1,17 @@
 package Model;
 
+@Entity
+@Table(name = "usuario")
 public class Usuario {
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_usuario;
+
+    @Column(nullable = false, unique = true)
     private String login;
+
+    @Column(nullable = false)
     private String senha;
 
     public Usuario(){

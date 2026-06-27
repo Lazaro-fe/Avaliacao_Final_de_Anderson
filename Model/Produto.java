@@ -1,13 +1,30 @@
 package Model;
+
+@Entity
+@Table(name = "produto")
 public class Produto {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false)
     private int id_produto;
+
+    @Column(nullable = false)
     private String nome_do_produto;
+
+    @Column(nullable = false)
     private int quantidade;
+
+    @Column(nullable = false)
     private double preco;
-    private int id_usuario;
-    private int id_categoria;
-    private String login;
+
+    @ManyToOne
+    @JoinColumn(name = "id_usuario", nullable = false)
+    private Usuario usuario;
+
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", nullable = false)
+    private Categoria categoria;
 
     public Produto(){
     }

@@ -1,9 +1,18 @@
 package Model;
 
+@Entity
+@Table(name = "categoria")
 public class Categoria {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_categoria;
+
+    @Column(nullable = false)
     private String categoria_do_produto;
+
+    public Categoria(){
+    }
 
     public Categoria(String categoria_do_produto){
         this.categoria_do_produto = categoria_do_produto;
