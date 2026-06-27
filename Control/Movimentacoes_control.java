@@ -1,5 +1,7 @@
 package Control;
 
+import javax.swing.JOptionPane;
+
 import DAO.Movimentacoes_dao;
 import DAO.Produto_dao;
 import Model.Movimentacao;
@@ -19,7 +21,7 @@ public class Movimentacoes_control {
     public Movimentacao registro_de_movimentacao(String tipo_de_movimentacao, int quantidade, Produto produto, Usuario usuario){
         
         if (quantidade < 0) {
-            
+            JOptionPane.showMessageDialog(null, "A quantidade deve ser maior que zero!");
         }
     }
 }
