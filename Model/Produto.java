@@ -24,7 +24,6 @@ public class Produto {
     @Column(nullable = false)
     private double preco;
 
-    // Transformado em String para evitar o erro "not-null property references a null"
     @Column(nullable = false)
     private String categoria; 
 

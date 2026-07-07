@@ -1,7 +1,6 @@
 package com.projeto.Avaliacao_Final_definitiva.Data_base.Repository;
 
 import java.util.Optional;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import com.projeto.Avaliacao_Final_definitiva.Data_base.Model.Usuario;
 
